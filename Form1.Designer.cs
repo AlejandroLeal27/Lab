@@ -35,6 +35,7 @@
             this.editarbtn = new System.Windows.Forms.Button();
             this.recargarbtn = new System.Windows.Forms.Button();
             this.busquedatxt = new System.Windows.Forms.TextBox();
+            this.agregarbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,11 +106,22 @@
             this.busquedatxt.TabIndex = 6;
             this.busquedatxt.TextChanged += new System.EventHandler(this.busquedatxt_TextChanged);
             // 
+            // agregarbtn
+            // 
+            this.agregarbtn.Location = new System.Drawing.Point(160, 15);
+            this.agregarbtn.Name = "agregarbtn";
+            this.agregarbtn.Size = new System.Drawing.Size(75, 23);
+            this.agregarbtn.TabIndex = 7;
+            this.agregarbtn.Text = "Agregar";
+            this.agregarbtn.UseVisualStyleBackColor = true;
+            this.agregarbtn.Click += new System.EventHandler(this.agregarbtn_Click);
+            // 
             // Laboratorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(490, 450);
+            this.Controls.Add(this.agregarbtn);
             this.Controls.Add(this.busquedatxt);
             this.Controls.Add(this.recargarbtn);
             this.Controls.Add(this.editarbtn);
@@ -135,6 +147,7 @@
         private System.Windows.Forms.Button editarbtn;
         private System.Windows.Forms.Button recargarbtn;
         private System.Windows.Forms.TextBox busquedatxt;
+        private System.Windows.Forms.Button agregarbtn;
     }
 }
 

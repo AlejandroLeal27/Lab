@@ -104,5 +104,23 @@ namespace Lab
                 }
             }
         }
+
+        private void agregarbtn_Click(object sender, EventArgs e)
+        {
+            string Nombre = Interaction.InputBox("Ingresa nombre del material: ", "Nombre");
+            string Cantidad = Interaction.InputBox("Ingresa la cantidad disponible: ", "Nombre");
+            using (LaboratorioEntities db = new LaboratorioEntities())
+            {
+                var Nuevo_Material  = new Inventario
+                {
+                    nombre = Nombre,
+                    disponible = int.Parse(Cantidad),
+                    pendiente = 0
+                };
+
+                db.Inventario.Add(Nuevo_Material);
+                db.SaveChanges();
+            }
+        }
     }
 }
